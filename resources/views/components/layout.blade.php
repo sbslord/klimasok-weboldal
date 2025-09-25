@@ -34,10 +34,10 @@
       </a>
 
       <nav class="hidden md:flex gap-6 items-center text-sm">
-        <a href="" class="hover:text-primary">Szolgáltatások</a>
+        <a href="/szolgaltatasok" class="hover:text-primary">Szolgáltatások</a>
         <a href="" class="hover:text-primary">Termékek</a>
-        <a href="/about" class="hover:text-primary">Rólunk</a>
-        <a href="/contact" class="hover:text-primary">Kapcsolat</a>
+        <a href="/rolunk" class="hover:text-primary">Rólunk</a>
+        <a href="/kapcsolat" class="hover:text-primary">Kapcsolat</a>
 		
 		@guest
 			<a href="/login" class="text-white bg-primary px-4 py-2 rounded-lg shadow hover:opacity-95">Belépés</a>

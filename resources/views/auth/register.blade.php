@@ -1,7 +1,7 @@
 <x-layout>
 	<x-heading>Regisztráció</x-heading>
 
-	<x-forms.form method="POST" action="/register">
+	<x-forms.form method="POST" action="/register" class="border rounded-lg p-6 shadow hover:shadow-lg transition">
 		@csrf
 		<x-forms.input label="Név" name="name" autocomplete="name" />
 		<x-forms.input label="Email" name="email" autocomplete="username" />

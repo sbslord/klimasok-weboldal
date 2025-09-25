@@ -6,7 +6,7 @@
 	  <p class="mt-4 text-gray-600">Telepítés, karbantartás és energiahatékony rendszerek — személyre szabott ajánlatok és garancia. Kérj ingyenes helyszíni felmérést!</p>
 
 	  <div class="mt-6 flex gap-4">
-		<a href="/contact" class="inline-block bg-primary text-white px-5 py-3 rounded-lg shadow">Felmérés kérése</a>
+		<a href="/kapcsolat" class="inline-block bg-primary text-white px-5 py-3 rounded-lg shadow">Felmérés kérése</a>
 		<a href="#products" class="inline-block border px-5 py-3 rounded-lg">Termékek</a>
 	  </div>
 
@@ -28,7 +28,7 @@
 
 	<div class="flex-1 flex justify-center items-center">
 	  <!-- kép helyőrző -->
-	  <div class="w-80 rounded-xl overflow-hidden shadow-lg">
+	  <div class="w-80 rounded-xl overflow-hidden shadow-lg border rounded-lg p-6 shadow hover:shadow-lg transition">
 		<img src="{{ asset('images/szaki.png') }}" alt="klíma" class="w-80 object-contain rounded-xl shadow-lg">
 	  </div>
 	</div>
@@ -70,7 +70,7 @@
 		<p class="mt-2 text-sm text-gray-600">5év garancia, Wifi, extra szűrő, R32</p>
 		<div class="mt-4 flex items-center justify-between">
 		  <div class="text-lg font-bold">290.000 - 375 000 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/kapcsolat">Ajánlat</a>
 		</div>
 	  </div>
 	  
@@ -84,7 +84,7 @@
 		<p class="mt-2 text-sm text-gray-600">(5év garancia, Wifi, extra szűrő, R32)</p>
 		<div class="mt-4 flex items-center justify-between">
 		  <div class="text-lg font-bold">320.000 - 405 000 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/kapcsolat">Ajánlat</a>
 		</div>
 	  </div>
 	  
@@ -98,7 +98,7 @@
 		<p class="mt-2 text-sm text-gray-600">(5év garancia, Wifi, extra szűrő, R32)</p>
 		<div class="mt-4 flex items-center justify-between">
 		  <div class="text-lg font-bold">420.000 - 505 000 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/kapcsolat">Ajánlat</a>
 		</div>
 	  </div>
 
@@ -113,7 +113,7 @@
 		<p class="mt-2 text-gray-600">Szakértelem, gyors kivitelezés és korrekt árak. Minden telepítésre garanciát vállalunk.</p>
 	  </div>
 	  <div class="mt-6 md:mt-0">
-		<a href="/contact" class="inline-block bg-accent text-white px-5 py-3 rounded-lg">Ingyenes árajánlat</a>
+		<a href="/kapcsolat" class="inline-block bg-accent text-white px-5 py-3 rounded-lg">Ingyenes árajánlat</a>
 	  </div>
 	</div>
 	</section>

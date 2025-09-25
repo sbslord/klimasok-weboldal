@@ -7,8 +7,9 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('index');
 });
-Route::view('/about', 'about');
-Route::get('/contact', [ContactController::class, 'create']);
+Route::view('/rolunk', 'about');
+Route::view('/szolgaltatasok', 'szolgaltatasok');
+Route::get('/kapcsolat', [ContactController::class, 'create']);
 Route::post('/contact', [ContactController::class, 'store']);
 //Route::view('/contact', 'contact');
 
