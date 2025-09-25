@@ -37,7 +37,7 @@
         <a href="" class="hover:text-primary">Szolgáltatások</a>
         <a href="" class="hover:text-primary">Termékek</a>
         <a href="/about" class="hover:text-primary">Rólunk</a>
-        <a href="" class="hover:text-primary">Kapcsolat</a>
+        <a href="/contact" class="hover:text-primary">Kapcsolat</a>
 		
 		@guest
 			<a href="/login" class="text-white bg-primary px-4 py-2 rounded-lg shadow hover:opacity-95">Belépés</a>
@@ -62,7 +62,7 @@
   <!-- FOOTER -->
   <footer class="mt-12 border-t">
     <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
-      <div>© <strong>Klimás</strong> 2025. Minden jog fenntartva.</div>
+      <div>© <strong>Klimások.eu</strong> 2025. Minden jog fenntartva.</div>
       <div class="flex gap-4 mt-4 md:mt-0">
         <a href="#">Adatvédelem</a>
         <a href="#">Impresszum</a>

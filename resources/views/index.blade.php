@@ -6,14 +6,14 @@
 	  <p class="mt-4 text-gray-600">Telepítés, karbantartás és energiahatékony rendszerek — személyre szabott ajánlatok és garancia. Kérj ingyenes helyszíni felmérést!</p>
 
 	  <div class="mt-6 flex gap-4">
-		<a href="#contact" class="inline-block bg-primary text-white px-5 py-3 rounded-lg shadow">Felmérés kérése</a>
+		<a href="/contact" class="inline-block bg-primary text-white px-5 py-3 rounded-lg shadow">Felmérés kérése</a>
 		<a href="#products" class="inline-block border px-5 py-3 rounded-lg">Termékek</a>
 	  </div>
 
 	  <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
 		<div class="bg-white p-4 rounded-lg shadow text-center">
 		  <div class="text-sm text-gray-500">Szakemberek</div>
-		  <div class="text-2xl font-bold">+10</div>
+		  <div class="text-2xl font-bold">1</div>
 		</div>
 		<div class="bg-white p-4 rounded-lg shadow text-center">
 		  <div class="text-sm text-gray-500">Év tapasztalat</div>
@@ -21,7 +21,7 @@
 		</div>
 		<div class="bg-white p-4 rounded-lg shadow text-center">
 		  <div class="text-sm text-gray-500">Garancia</div>
-		  <div class="text-2xl font-bold">2 év</div>
+		  <div class="text-2xl font-bold">5 év</div>
 		</div>
 	  </div>
 	</div>
@@ -62,31 +62,43 @@
 
 	  <!-- Card -->
 	  <div class="bg-white rounded-lg shadow p-6">
-		<h3 class="font-semibold">Model A - Inverter</h3>
+		<img class="mb-5" src="{{ asset('images/klimak/Midea_SOL-12-SP_mini.png') }}" alt="klíma" class="w-80 object-contain rounded-xl shadow-lg">
+		<h3 class="font-semibold">SOL-12-SP Solstice oldalfali split</h3>
 		<p class="mt-2 text-sm text-gray-600">Hatékony, csendes működés, Wi-Fi kapcsolat.</p>
+		<p class="mt-2 text-sm text-gray-600">Hűtésben: A+++ (3,5kW)</p>
+		<p class="mt-2 text-sm text-gray-600">Fűtésben: A++ (3,8 kW, -25 fok, H tarifa)</p>
+		<p class="mt-2 text-sm text-gray-600">5év garancia, Wifi, extra szűrő, R32</p>
 		<div class="mt-4 flex items-center justify-between">
-		  <div class="text-lg font-bold">299.900 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="#contact">Ajánlat</a>
+		  <div class="text-lg font-bold">290.000 - 375 000 Ft</div>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
 		</div>
 	  </div>
-
+	  
 	  <!-- Card -->
 	  <div class="bg-white rounded-lg shadow p-6">
-		<h3 class="font-semibold">Model B - Energiatakarékos</h3>
-		<p class="mt-2 text-sm text-gray-600">Alacsony fogyasztás, nagy teljesítmény.</p>
+		<img class="mb-5" src="{{ asset('images/klimak/Midea_MEX-12-SP_mini.png') }}" alt="klíma" class="w-80 object-contain rounded-xl shadow-lg">
+		<h3 class="font-semibold">MEX-12-SP All Easy Pro oldalfali split</h3>
+		<p class="mt-2 text-sm text-gray-600">Hatékony, csendes működés, Wi-Fi kapcsolat.</p>
+		<p class="mt-2 text-sm text-gray-600">Hűtésben: A+++ (3,5kW)</p>
+		<p class="mt-2 text-sm text-gray-600">Fűtésben: A++ (4,0 kW, -25 fok, H tarifa)</p>
+		<p class="mt-2 text-sm text-gray-600">(5év garancia, Wifi, extra szűrő, R32)</p>
 		<div class="mt-4 flex items-center justify-between">
-		  <div class="text-lg font-bold">249.900 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="#contact">Ajánlat</a>
+		  <div class="text-lg font-bold">320.000 - 405 000 Ft</div>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
 		</div>
 	  </div>
-
+	  
 	  <!-- Card -->
 	  <div class="bg-white rounded-lg shadow p-6">
-		<h3 class="font-semibold">Model C - Csendes</h3>
-		<p class="mt-2 text-sm text-gray-600">Kifejezetten lakóterekhez tervezve.</p>
+		<img class="mb-5" src="{{ asset('images/klimak/Midea_MEX-12-SP_mini.png') }}" alt="klíma" class="w-80 object-contain rounded-xl shadow-lg">
+		<h3 class="font-semibold">MOPP-12-SP Oasis Plus+ oldalfali split</h3>
+		<p class="mt-2 text-sm text-gray-600">Hatékony, csendes működés, Wi-Fi kapcsolat.</p>
+		<p class="mt-2 text-sm text-gray-600">Hűtésben: A+++ (3,5kW)</p>
+		<p class="mt-2 text-sm text-gray-600">Fűtésben: A+++ (3,8 kW, -30 fok, H tarifa)</p>
+		<p class="mt-2 text-sm text-gray-600">(5év garancia, Wifi, extra szűrő, R32)</p>
 		<div class="mt-4 flex items-center justify-between">
-		  <div class="text-lg font-bold">219.900 Ft</div>
-		  <a class="px-3 py-2 bg-primary text-white rounded" href="#contact">Ajánlat</a>
+		  <div class="text-lg font-bold">420.000 - 505 000 Ft</div>
+		  <a class="px-3 py-2 bg-primary text-white rounded" href="/contact">Ajánlat</a>
 		</div>
 	  </div>
 
@@ -101,25 +113,8 @@
 		<p class="mt-2 text-gray-600">Szakértelem, gyors kivitelezés és korrekt árak. Minden telepítésre garanciát vállalunk.</p>
 	  </div>
 	  <div class="mt-6 md:mt-0">
-		<a href="#contact" class="inline-block bg-accent text-white px-5 py-3 rounded-lg">Ingyenes árajánlat</a>
+		<a href="/contact" class="inline-block bg-accent text-white px-5 py-3 rounded-lg">Ingyenes árajánlat</a>
 	  </div>
 	</div>
-	</section>
-
-	<!-- CONTACT -->
-	<section id="contact" class="max-w-3xl mx-auto px-6 py-12">
-	<h2 class="text-2xl font-bold">Kapcsolat</h2>
-	<p class="text-gray-600 mt-2">Írj nekünk, és visszahívunk a legközelebbi munkanapon.</p>
-
-	<form class="mt-6 grid grid-cols-1 gap-4">
-	  <input class="p-3 border rounded" placeholder="Név" />
-	  <input class="p-3 border rounded" placeholder="Telefonszám" />
-	  <input class="p-3 border rounded" placeholder="E-mail" />
-	  <textarea class="p-3 border rounded" rows="4" placeholder="Üzenet"></textarea>
-	  <div class="flex gap-3">
-		<button type="submit" class="bg-primary text-white px-4 py-2 rounded">Küldés</button>
-		<button type="button" class="border px-4 py-2 rounded">Hívás kérése</button>
-	  </div>
-	</form>
 	</section>
 </x-layout>
