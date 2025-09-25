@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Klimás - Kezdő Template</title>
+  
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  
+  <title>Klimások.eu</title>
   <!-- Tailwind CDN (fejlesztéshez) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Egy gyors konfiguráció, ha szeretnél egyedi színeket -->
@@ -68,10 +71,10 @@
       </div>
     </div>
 
-    <div class="flex-1">
+    <div class="flex-1 flex justify-center items-center">
       <!-- kép helyőrző -->
-      <div class="w-full rounded-xl overflow-hidden shadow-lg">
-        <img src="https://images.unsplash.com/photo-1582719478250-7fca2f1ee8b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="klíma" class="w-full h-64 object-cover sm:h-80">
+      <div class="w-80 rounded-xl overflow-hidden shadow-lg">
+        <img src="{{ asset('images/szaki.png') }}" alt="klíma" class="w-80 object-contain rounded-xl shadow-lg">
       </div>
     </div>
   </section>

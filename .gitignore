@@ -22,3 +22,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Node (ha Tailwind build-et használsz)
+dist/
+
