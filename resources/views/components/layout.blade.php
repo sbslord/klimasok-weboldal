@@ -44,6 +44,18 @@
 			<a href="/register" class="text-white bg-primary px-4 py-2 rounded-lg shadow hover:opacity-95">Regisztráció</a>
 		@endguest
 		@auth
+			<a href="{{ route('cart.index') }}" class="relative flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-2 6h14l-2-6M7 13h10m-6 8a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4z" />
+				</svg>
+				<span>Kosár</span>
+
+				@if(auth()->check() && auth()->user()->cart && auth()->user()->cart->items->count() > 0)
+					<span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs font-bold">
+						{{ auth()->user()->cart->items->sum('quantity') }}
+					</span>
+				@endif
+			</a>
 			<form method="POST" action="/logout">
 				@csrf
 				<button type="submit" class="text-white bg-primary px-4 py-2 rounded-lg shadow hover:opacity-95">Kilépés</button>
