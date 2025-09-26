@@ -15,7 +15,7 @@
       theme: {
         extend: {
           colors: {
-            primary: '#0ea5a4', // türkiz
+            primary: '#099DD1', // türkiz
             accent: '#0f172a',   // sötét
           }
         }
