@@ -5,7 +5,6 @@
 	<x-auth-session-status class="mb-4" :status="session('status')" />
 	
 	<x-forms.form method="POST" action="/login" class="border rounded-lg p-6 shadow hover:shadow-lg transition">
-		@csrf
 		<x-forms.input label="Email" name="email" autocomplete="username" />
 		<x-forms.input label="Jelszó" name="password" type="password" />
 		

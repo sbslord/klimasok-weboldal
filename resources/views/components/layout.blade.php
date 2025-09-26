@@ -35,7 +35,7 @@
 
       <nav class="hidden md:flex gap-6 items-center text-sm">
         <a href="/szolgaltatasok" class="hover:text-primary">Szolgáltatások</a>
-        <a href="" class="hover:text-primary">Termékek</a>
+        <a href="/klima" class="hover:text-primary">Termékek</a>
         <a href="/rolunk" class="hover:text-primary">Rólunk</a>
         <a href="/kapcsolat" class="hover:text-primary">Kapcsolat</a>
 		

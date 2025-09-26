@@ -7,7 +7,7 @@
 
 		<div class="mt-6 flex gap-4">
 		<a href="/kapcsolat" class="inline-block bg-primary text-white px-5 py-3 rounded-lg shadow">Felmérés kérése</a>
-		<a href="#products" class="inline-block border px-5 py-3 rounded-lg">Termékek</a>
+		<a href="/klima" class="inline-block border px-5 py-3 rounded-lg">Termékek</a>
 		</div>
 
 		<div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -54,7 +54,7 @@
 		</div>
 		</div>
 	</section>
-
+	
 	<!-- PRODUCTS / CARDS -->
 	<section id="products" class="max-w-6xl mx-auto px-6 py-12">
 		<h2 class="text-2xl font-bold">Népszerű klíma modellek</h2>
@@ -63,7 +63,6 @@
 				<x-klima-card :klima="$klima" />
 			@endforeach		
 		</div>
-
 	</section>
 
 	<!-- ABOUT / CTA -->

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactPosted;
 
 class ContactController extends Controller
 {
@@ -26,6 +28,9 @@ class ContactController extends Controller
 			$attributes['user_id'] = auth()->id();
 		}
 		$contact = Contact::create($attributes);
+		
+		//Email küldés hogy sikeresen létrehozta a munkát
+		Mail::to('saska.attila@klimasok.eu')->send(new ContactPosted());
 		
 		return redirect('/');
     }

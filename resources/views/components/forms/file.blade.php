@@ -6,12 +6,8 @@
         'name' => $name,
         'class' => 'rounded-xl bg-white/10 border border-black/25 px-5 py-4 w-full'
     ];
-
-    $oldValue = old($name);
 @endphp
 
 <x-forms.field :label="$label" :name="$name">
-    <select {{ $attributes->merge($defaults) }}>
-        {{ $slot }}
-    </select>
+    <input type="file" {{ $attributes->merge($defaults) }}>
 </x-forms.field>

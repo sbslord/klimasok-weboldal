@@ -33,9 +33,7 @@ class DatabaseSeeder extends Seeder
             ->create();
 
         // + opcionálisan további klímák random branddel
-        Klima::factory()->count(10)->create([
-			'image' => 'default.jpg'
-		]);
+        Klima::factory()->count(10)->create();
 		
 		//20 Contact-t hozzáadása
 		Contact::factory()->count(20)->create();

@@ -4,7 +4,6 @@
 	<!-- CONTACT -->
 	<section id="contact" class="max-w-3xl mx-auto px-6 py-12">
 		<x-forms.form method="POST" action="/contact" class="border rounded-lg p-6 shadow hover:shadow-lg transition">
-			@csrf
 			@auth
 				<x-forms.input label="Név" name="name" placeholder="Név" value="{{ $user->name}}" readonly />
 				<x-forms.input label="Telefonszám" name="phone" placeholder="+36301234567" value="{{ $user->phone}}" />
