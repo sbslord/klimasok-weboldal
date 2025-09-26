@@ -3,9 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Models\Klima;
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+		'klimak' => Klima::with('brand')->latest()->simplePaginate(6)
+	]);
 });
 Route::view('/rolunk', 'about');
 Route::view('/szolgaltatasok', 'szolgaltatasok');
