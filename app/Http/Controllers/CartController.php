@@ -44,6 +44,32 @@ class CartController extends Controller
 
         return redirect()->route('cart.index');
     }
+	
+	public function addWithInstall(Request $request, $klimaId)
+	{
+		$klima = Klima::findOrFail($klimaId);
+
+		$cart = auth()->user()->cart ?? Cart::create(['user_id' => auth()->id()]);
+
+		$installPrice = 70000; // Beszerelési díj, később dinamikussá tehető
+
+		$item = $cart->items()->where('klima_id', $klima->id)->where('with_install', true)->first();
+
+		if ($item) {
+			$item->quantity++;
+			$item->save();
+		} else {
+			$cart->items()->create([
+				'klima_id' => $klima->id,
+				'quantity' => 1,
+				'price' => $klima->price,
+				'with_install' => true,
+				'install_price' => $installPrice,
+			]);
+		}
+
+		return redirect()->back()->with('success', 'Termék beszereléssel hozzáadva a kosárhoz!');
+	}
 
     public function remove($itemId)
     {

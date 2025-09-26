@@ -19,6 +19,8 @@ return new class extends Migration
 			$table->foreignIdFor(Klima::class)->constrained()->onDelete('cascade');
 			$table->integer('quantity')->default(1);
 			$table->decimal('price', 10, 2); // aktuális ár megőrzése
+			$table->boolean('with_install')->default(false);
+			$table->integer('install_price')->nullable()->default(0);
 			$table->timestamps();
 		});
 	}

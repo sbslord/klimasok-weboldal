@@ -21,6 +21,7 @@ Route::get('/klima/create', [KlimaController::class, 'create'])->middleware('aut
 Route::post('/klima', [KlimaController::class, 'store'])->middleware('auth');
 
 Route::middleware(['auth'])->group(function () {
+	Route::post('/cart/add-with-install/{id}', [CartController::class, 'addWithInstall'])->name('cart.add_with_install');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/cart/add/{klimaId}', [CartController::class, 'add'])->name('cart.add');
     Route::post('/cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');

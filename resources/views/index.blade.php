@@ -1,6 +1,6 @@
 <x-layout>
 	<!-- HERO -->
-	<section class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
+	<section class="max-w-6xl mx-auto px-2 py-4 flex flex-col md:flex-row items-center gap-10">
 		<div class="flex-1">
 		<h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Megbízható klíma megoldások otthonodba</h1>
 		<p class="mt-4 text-gray-600">Telepítés, karbantartás és energiahatékony rendszerek — személyre szabott ajánlatok és garancia. Kérj ingyenes helyszíni felmérést!</p>
@@ -35,7 +35,7 @@
 	</section>
 
 	<!-- FEATURES -->
-	<section id="features" class="max-w-6xl mx-auto px-6 py-12">
+	<section id="features" class="max-w-6xl mx-auto px-2 py-4">
 		<h2 class="text-2xl font-bold">Mit kínálunk?</h2>
 		<p class="text-gray-600 mt-2">Komplex szolgáltatás a kiválasztástól a szervizig.</p>
 
@@ -57,8 +57,10 @@
 	
 	<!-- PRODUCTS / CARDS -->
 	<section id="products" class="max-w-6xl mx-auto px-6 py-12">
-		<h2 class="text-2xl font-bold">Népszerű klíma modellek</h2>
-		<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<h2 class="text-3xl font-extrabold text-gray-800 border-b-4 border-blue-600/25 inline-block pb-2">
+			Népszerű klíma modellek
+		</h2>
+		<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 			@foreach($klimak as $klima)
 				<x-klima-card :klima="$klima" />
 			@endforeach		

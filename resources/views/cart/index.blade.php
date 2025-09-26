@@ -21,6 +21,9 @@
 							<tr class="hover:bg-gray-50">
 								<td class="px-4 py-3 text-sm font-medium text-gray-700">
 									{{ $item->klima->name }}
+									@if($item->with_install)
+										<div class="text-xs text-green-600 font-semibold mt-1">Beszereléssel</div>
+									@endif
 								</td>
 								<td class="px-4 py-3 text-sm text-right text-gray-700">
 									{{ number_format($item->price, 0, ',', ' ') }} Ft
@@ -45,14 +48,31 @@
 									</form>
 								</td>
 							</tr>
+
+							@if($item->with_install)
+								<tr class="bg-green-50">
+									<td class="px-4 py-2 text-sm text-green-700 font-medium">
+										Beszerelés díja
+									</td>
+									<td class="px-4 py-2 text-sm text-right text-green-700">
+										{{ number_format($item->install_price, 0, ',', ' ') }} Ft
+									</td>
+									<td></td>
+									<td class="px-4 py-2 text-sm text-right font-semibold text-green-700">
+										{{ number_format($item->install_price * $item->quantity, 0, ',', ' ') }} Ft
+									</td>
+									<td></td>
+								</tr>
+							@endif
 						@endforeach
 					</tbody>
+
 				</table>
 			</div>
 
 			<div class="mt-6 flex justify-between items-center">
 				<h3 class="text-xl font-bold text-gray-800">
-					Összesen: {{ number_format($cart->items->sum(fn($item) => $item->price * $item->quantity), 0, ',', ' ') }} Ft
+					Összesen: {{ number_format($cart->items->sum(fn($item) => ($item->price + $item->install_price) * $item->quantity), 0, ',', ' ') }} Ft
 				</h3>
 				<a href="" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold">
 					Tovább a fizetéshez
