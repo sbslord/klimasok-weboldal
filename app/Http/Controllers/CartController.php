@@ -33,7 +33,7 @@ class CartController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Termék hozzáadva a kosárhoz!');
+        return redirect('/cart');
     }
 
     public function update(Request $request, $itemId)
@@ -68,7 +68,7 @@ class CartController extends Controller
 			]);
 		}
 
-		return redirect()->back()->with('success', 'Termék beszereléssel hozzáadva a kosárhoz!');
+		return redirect('/cart');
 	}
 
     public function remove($itemId)

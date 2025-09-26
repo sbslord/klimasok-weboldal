@@ -16,7 +16,7 @@ Route::get('/', function () {
 	]);
 });
 
-Route::get('/klima', [KlimaController::class, 'index']);
+Route::get('/klima', [KlimaController::class, 'index'])->name('klima.index');
 Route::get('/klima/create', [KlimaController::class, 'create'])->middleware('auth');
 Route::post('/klima', [KlimaController::class, 'store'])->middleware('auth');
 

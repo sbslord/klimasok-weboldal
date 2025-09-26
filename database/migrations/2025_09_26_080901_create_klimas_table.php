@@ -35,7 +35,7 @@ return new class extends Migration
 			$table->integer('cooling_max_temp')->nullable(); // Hűtési működési tartomány maximum (°C)
 			$table->boolean('wifi_enabled')->default(false);       // wifi (igen/nem)
 			$table->string('refrigerant_type')->nullable();        // gáz típusa
-			$table->string('extra_filter')->nullable();            // extra szűrő típusa / neve
+			$table->boolean('extra_filter')->default(false);            // extra szűrő 
 			$table->boolean('h_tarifa')->default(false); // H tarifa támogatás
 			$table->boolean('in_stock')->default(true);
 			$table->boolean('featured')->default(false);

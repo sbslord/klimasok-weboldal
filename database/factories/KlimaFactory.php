@@ -51,7 +51,7 @@ class KlimaFactory extends Factory
 
             'wifi_enabled' => $this->faker->boolean(),
             'refrigerant_type' => $this->faker->randomElement(['R32', 'R410A', 'R290']),
-            'extra_filter' => $this->faker->randomElement(['Plasma', 'Nano Silver', null]),
+            'extra_filter' => $this->faker->boolean(),
 			
 			'h_tarifa' => $this->faker->boolean(),
 			'in_stock' => $this->faker->boolean(),

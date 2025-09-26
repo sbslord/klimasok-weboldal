@@ -36,12 +36,14 @@
 		<x-forms.input label="Fűtési működési tartomány maximum (°C)" name="heating_max_temp" type="number" />
 
 		<input type="hidden" name="wifi_enabled" value="0">
-		<x-forms.checkbox label="Wifi támogatás" name="wifi_enabled" value="0" />
+		<x-forms.checkbox label="Wifi támogatás" name="wifi_enabled" value="1" />
 		<x-forms.input label="Hűtőközeg típusa" name="refrigerant_type" />
-		<x-forms.input label="Extra szűrő típusa" name="extra_filter" />
+		
+		<input type="hidden" name="extra_filter" value="0">
+		<x-forms.checkbox label="Extra szűrő" name="extra_filter" value="1" />
 
 		<input type="hidden" name="h_tarifa" value="0">
-		<x-forms.checkbox label="H tarifa támogatás" name="h_tarifa" value="0" />
+		<x-forms.checkbox label="H tarifa támogatás" name="h_tarifa" value="1" />
 		
 		<input type="hidden" name="in_stock" value="0">
 		<x-forms.checkbox label="Raktáron" name="in_stock" value="1" />
