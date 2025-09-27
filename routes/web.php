@@ -7,6 +7,7 @@ use App\Http\Controllers\KlimaController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', [IndexController::class, 'index']);
 
@@ -29,6 +30,11 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+//Saját admin felület
+Route::middleware(['auth', 'admin'])->prefix('custom-admin')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('custom.admin.dashboard');
 });
 
 Route::view('/rolunk', 'about');

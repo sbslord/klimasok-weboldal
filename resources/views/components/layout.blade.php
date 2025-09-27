@@ -60,6 +60,9 @@
 					</span>
 				@endif
 			</a>
+			@admin
+				<a href="/admin" class="text-white bg-red-500 px-4 py-2 rounded-lg shadow hover:opacity-95">Admin</a>
+			@endadmin
 			<form method="POST" action="/logout">
 				@csrf
 				<button type="submit" class="text-white bg-primary px-4 py-2 rounded-lg shadow hover:opacity-95">Kilépés</button>
