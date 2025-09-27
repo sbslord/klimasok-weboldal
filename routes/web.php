@@ -22,15 +22,16 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
 	
 	Route::post('/cart/add-with-install/{id}', [CartController::class, 'addWithInstall'])->name('cart.add_with_install');
-    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-    Route::post('/cart/add/{klimaId}', [CartController::class, 'add'])->name('cart.add');
-    Route::post('/cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');
-    Route::delete('/cart/remove/{itemId}', [CartController::class, 'remove'])->name('cart.remove');
+	Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+	Route::post('/cart/add/{klimaId}', [CartController::class, 'add'])->name('cart.add');
+	Route::post('/cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update');
+	Route::delete('/cart/remove/{itemId}', [CartController::class, 'remove'])->name('cart.remove');
 	
 	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 //Saját admin felület
 Route::middleware(['auth', 'admin'])->prefix('custom-admin')->group(function () {

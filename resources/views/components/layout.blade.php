@@ -56,7 +56,7 @@
 
 				@if($cart && $cart->items->count() > 0)
 					<span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs font-bold">
-						{{ auth()->user()->cart->items->sum('quantity') }}
+						{{ $cart->items->sum('quantity') }}
 					</span>
 				@endif
 			</a>

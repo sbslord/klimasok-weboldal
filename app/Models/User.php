@@ -24,7 +24,7 @@ class User extends Authenticatable
 		'phone',
 		'is_admin',
     ];
-
+	protected $with = ['cart.items'];
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -57,6 +57,12 @@ class User extends Authenticatable
 	}
 	public function cart()
 	{
-		return $this->hasOne(Cart::class)->where('status', 'open')->latest();
+		//return $this->hasOne(Cart::class)->where('status', 'open')->latest();
+		return $this->hasOne(Cart::class)->where('status', 'pending')->latestOfMany();
+	}
+	// User model
+	public function getCartItemsAttribute()
+	{
+		return $this->cart?->items ?? collect();
 	}
 }
