@@ -1,4 +1,5 @@
 @props(['cart'])
+
 <x-layout>
 
     <x-heading>Kosár</x-heading>
@@ -84,9 +85,9 @@
                 <h3 class="text-xl font-bold text-green-400">
                     Összesen(Bruttó): {{ number_format($cart->items->sum(fn($item) => ($item->price + $item->install_price) * $item->quantity), 0, ',', ' ') }} Ft
                 </h3>
-                <a href="" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold">
-                    Tovább a fizetéshez
-                </a>
+                <a href="{{ route('checkout') }}" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold">
+					Tovább a fizetéshez
+				</a>
             </div>
         @else
             <p class="text-center text-gray-500 text-lg mt-10">A kosár üres 😔</p>

@@ -50,8 +50,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Contact::class);
     }
+	public function carts()
+	{
+		return $this->hasMany(Cart::class);
+	}
 	public function cart()
 	{
-		return $this->hasOne(Cart::class);
+		return $this->hasOne(Cart::class)->where('status', 'open')->latest();
 	}
 }

@@ -1,3 +1,7 @@
+@php
+    $cart = auth()->check() ? auth()->user()->carts()->latest()->first() : null;
+@endphp
+
 <!doctype html>
 <html lang="hu">
 <head>
@@ -50,7 +54,7 @@
 				</svg>
 				<span>Kosár</span>
 
-				@if(auth()->check() && auth()->user()->cart && auth()->user()->cart->items->count() > 0)
+				@if($cart && $cart->items->count() > 0)
 					<span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-xs font-bold">
 						{{ auth()->user()->cart->items->sum('quantity') }}
 					</span>

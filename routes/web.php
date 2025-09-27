@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\KlimaController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckOutController;
 use App\Models\Klima;
 
 Route::get('/', function () {
@@ -19,6 +20,10 @@ Route::get('/', function () {
 Route::get('/klima', [KlimaController::class, 'index'])->name('klima.index');
 Route::get('/klima/create', [KlimaController::class, 'create'])->middleware('auth');
 Route::post('/klima', [KlimaController::class, 'store'])->middleware('auth');
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout/process', [CheckoutController::class, 'process'])->name('checkout.process');
+Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
 
 Route::middleware(['auth'])->group(function () {
 	Route::post('/cart/add-with-install/{id}', [CartController::class, 'addWithInstall'])->name('cart.add_with_install');
