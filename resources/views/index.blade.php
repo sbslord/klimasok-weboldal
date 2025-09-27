@@ -50,7 +50,7 @@
 		</div>
 		<div class="bg-white p-6 rounded-lg shadow">
 		<h3 class="font-semibold">Szerviz és garancia</h3>
-		<p class="mt-2 text-sm text-gray-600">Gyors javítás, alkatrészellátás, 2 év garancia.</p>
+		<p class="mt-2 text-sm text-gray-600">Gyors javítás, alkatrészellátás, 5 év garancia.</p>
 		</div>
 		</div>
 	</section>

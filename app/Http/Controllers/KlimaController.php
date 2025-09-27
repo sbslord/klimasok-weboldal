@@ -103,7 +103,12 @@ class KlimaController extends Controller
 			$query->where('featured', true);
 		}
 
-		$klimak = $query->latest()->paginate(12)->withQueryString();
+		//$klimak = $query->latest()->paginate(12)->withQueryString();
+		$klimak = $query
+			->with('brand:id,name')   // eager loading, megszünteti az N+1-et, csak az id és name mezőt tölti be
+			->latest()
+			->paginate(12)
+			->withQueryString();
 
         return view('klimak.index', [
 			'brands' => Brand::all(),
